@@ -1,6 +1,6 @@
 # Javascript in 2 days
 
-## Javascript day 1 - basic course
+## Javascript day 1 and 2 - basic course
 
 ### Section 1: Getting started
 #### What is Javascript
@@ -51,5 +51,30 @@ Javascript: programming language
 - for...of: iterate over the element or item
 
 ### Section 5: Objects
+
+- Factory function
+- Constructor function
+- Dynamic Nature of Objects (Possible to add more properties outside of the class)
+- Function is object
+- Ways to loop through all keys (properties) in an object
+- Clone an object
+- GC in JS (GC auto de-allocate the memory - nothing to do here)
+- Built-in object - Math
+- Built-in object - String
+- Template literal - format a string the way we wants it looks like
+- Date API
+
+
 ### Section 6: Arrays
+
+- Array built-in method
+    - push
+    - unshift
+    - splice
+    - indexOf
+    - lastIndexOf
+    - includes
+    - find item in array of object using function
+- Arrow Functions
+
 ### Section 7: Functions
