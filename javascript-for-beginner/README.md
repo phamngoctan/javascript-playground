@@ -76,5 +76,18 @@ Javascript: programming language
     - includes
     - find item in array of object using function
 - Arrow Functions
+- Combine arrays using the "Spread" Operator
+
 
 ### Section 7: Functions
+Functions are objects
+
+- Functions expressions
+- Hoisting (the process of moving function declaration to the top of the file by JavaScript Engine automatically)
+- The rest operator (...args)
+    It is different with the SPREAD operator in an array
+- Local & global scope
+- let vs var keyword - should avoid var keyword :)
+- this keyword - for object and for function 
+
+
