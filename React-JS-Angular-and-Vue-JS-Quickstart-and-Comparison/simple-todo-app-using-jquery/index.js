@@ -6,46 +6,39 @@ let todos = [];
 buttonEl.click(addTodo);
 
 function addTodo() {
-    let userInput = inputEl.value;
+    let userInput = inputEl.val();
     if (userInput.trim() == '') {
         return;
     }
     console.log('User input value: ' + userInput);
-    let newTodo = {
-        id: Math.random(),
-        value: userInput
-    }
+    let newTodo = initNewTopo(userInput)
     todos.push(newTodo);
     
-    let todoLi = createLiTodo();
-    todoLi.textContent = userInput;
-    todoLi.dataset.id = newTodo.id;
+    // let todoLi = createLiTodo(userInput);
+    $('<li>' + userInput + '</li>')
+        .appendTo(ulEl)
+        .attr('dataset-id', newTodo.id)
+        .click(removeTodo);
 
-    ulEl.appendChild(todoLi);
     pointBackToInput();
 }
 
-function createLiTodo() {
-    let todoLi = document.createElement('li');
-    todoLi.addEventListener('click', removeTodo);
-    return todoLi;
+function initNewTopo(userInput) {
+    return {
+        id: Math.random(),
+        value: userInput
+    };
 }
 
 function pointBackToInput() {
     inputEl.focus();
-    inputEl.value = '';
+    inputEl.val('');
 }
 
 function removeTodo(event) {
-    let clickedLi = event.target;
-    let clickedLiId = clickedLi.dataset.id;
+    let clickedLi = $(this);
+    let clickedLiId = clickedLi.attr('dataset-id');
     console.log(clickedLiId);
-    // todos.forEach((todo, i) => {
-    //     if (todo.id == clickedLiId) {
-    //         todos.splice(i, 1);
-    //         break;
-    //     }
-    // })
     for (let i = 0; i < todos.length; i++) {
         if (todos[i]['id']== clickedLiId) {
             todos.splice(i, 1);
@@ -53,5 +46,5 @@ function removeTodo(event) {
         }
     }
     console.log(todos);
-    clickedLi.parentNode.removeChild(clickedLi);
+    clickedLi.remove();
 }
