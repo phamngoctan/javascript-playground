@@ -1,3 +1,18 @@
+Vue.component('app-user', {
+    props: ['user'],
+    data: function() {
+        return {
+            // username: 'Chris'
+        }
+    },
+    template: '<p @click="userClicked">{{ user }}</p>',
+    methods: {
+        userClicked() {
+            this.$emit('usrclicked', this.user);
+        }
+    }
+});
+
 new Vue({
     el: '#app',
     data: {
@@ -22,7 +37,7 @@ new Vue({
             pointBackToInput.apply(this);
             function pointBackToInput() {
                 this.$refs.inputText.focus();
-                this.userInput = "";
+                this.userInput = '';
             }
         },
         removeTodo(todoItem) {
@@ -33,6 +48,22 @@ new Vue({
                 }
             }
             console.log(this.todos);
+        },
+        getColor(number) {
+            return number % 2 == 0 ? '#2ab52a' : 'orange';
+        },
+        userWasClicked(name) {
+            alert(name);
         }
     }
-})
+});
+
+
+new Vue({
+    el: '#secondApp',
+    data: {
+        message: "Second app warmly welcome"
+    }
+});
+
+
