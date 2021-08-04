@@ -41,12 +41,18 @@ function removeTodo(event) {
     let clickedLi = event.target;
     let clickedLiId = clickedLi.dataset.id;
     console.log(clickedLiId);
-    todos.forEach((todo, i) => {
-        if (todo.id == clickedLiId) {
+    // todos.forEach((todo, i) => {
+    //     if (todo.id == clickedLiId) {
+    //         todos.splice(i, 1);
+    //         break;
+    //     }
+    // })
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i]['id']== clickedLiId) {
             todos.splice(i, 1);
             break;
         }
-    })
+    }
     console.log(todos);
     clickedLi.parentNode.removeChild(clickedLi);
 }
