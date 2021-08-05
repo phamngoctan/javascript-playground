@@ -16,6 +16,13 @@
     - TypeScript: superset to Javascript => needs to be compiled to Javascript, added features like Types, Interfaces, Generics, ...
     - Webpact: Bundler => allows you to split JS code over multiple Files and ship one bundle in the end. (not so clear for me)
 
+# VueJS
+
+- v-model= two ways binding to input field
+- v-for=
+- v-on:click=
+- v-bind:class=
+- Vue component
 
 # Notes
 Learn some more course about Javascript, DOM access, events, ...
