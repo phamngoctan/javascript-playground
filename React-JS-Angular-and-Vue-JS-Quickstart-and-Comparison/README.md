@@ -23,6 +23,16 @@
 - v-on:click=
 - v-bind:class=
 - Vue component
+- npm
+- Webpack
+  - entry (root directory)
+  - output (output file with directory)
+- Deployment for different platforms
+
+Last feeling, the deployment for PROD environment is quite easy to setup. I really like it.
+
+# ReactJS
+Developed by Facebook
 
 # Notes
 Learn some more course about Javascript, DOM access, events, ...
