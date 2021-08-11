@@ -5,6 +5,7 @@ import './App.css';
 import User from './components/User';
 import Blog from './components/Blog';
 import Account from './components/Account';
+import MarkdownEditor from './components/MarkdownEditor';
 
 function App() {
   return (
@@ -32,12 +33,14 @@ function App() {
         <div>
           <Link to="/">Home</Link> | 
           <Link to="/account">Account</Link> |
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog">Blog</Link> |
+          <Link to="/markdown-editor">Markdown demo</Link>
         </div>
         <hr/>
         <Route exact path={["/", "/user"]} component={User}></Route>
         <Route path="/account" component={Account}></Route>
         <Route path="/blog" component={Blog}></Route>
+        <Route path="/markdown-editor" component={MarkdownEditor}></Route>
       </div>
     </Router>
   );

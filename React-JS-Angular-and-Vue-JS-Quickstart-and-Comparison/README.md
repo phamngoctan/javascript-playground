@@ -45,6 +45,8 @@ In a React component, props are variables passed to it by its parent component. 
 ### How React updates the DOM
 React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
 
+# Angular
+Led by the Angular team at Google.
 
 # Notes
 Learn some more course about Javascript, DOM access, events, ...

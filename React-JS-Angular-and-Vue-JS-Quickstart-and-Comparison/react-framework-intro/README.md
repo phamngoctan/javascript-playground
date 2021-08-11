@@ -9,6 +9,9 @@ create-react-app react-framework-intro
 
 # Add router dependency
 npm install --save react-router-dom
+
+# Add remarkable dependency for markdown text live editor
+npm install remarkable --save
 ```
 
 ## Available Scripts
