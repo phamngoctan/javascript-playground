@@ -150,3 +150,26 @@ playVideo.call({name: 'Mosh'}, 1, 2);
 playVideo.apply({name: 'Mosh'}, [1, 2]);
 const fn = playVideo.bind({name: 'Mosh'});
 fn();
+
+
+// Closures playground
+// Reference https://stackoverflow.com/questions/111102/how-do-javascript-closures-work
+console.log('----------------------')
+function curry(fn) {
+  const args = [];
+  return function inner(arg) {
+    console.log("fn.length? " + fn.length);
+    if(args.length === fn.length) {
+      return fn(...args);
+    }
+    args.push(arg);
+    return inner;
+  }
+}
+
+function add(a, b) {
+  return a + b
+}
+
+const curriedAdd = curry(add)
+console.log(curriedAdd(2)(3)()) // 5
