@@ -2,7 +2,7 @@
 function Info() {
   return (
     <div>
-      <h1>The Info</h1>
+      <h1>Info component</h1>
       <p>React is awesome</p>
     </div>
   );

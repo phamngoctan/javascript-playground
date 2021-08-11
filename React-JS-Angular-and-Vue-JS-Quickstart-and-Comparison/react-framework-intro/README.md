@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+How to create new project: https://reactjs.org/docs/create-a-new-react-app.html
+```
+npm install -g create-react-app
+create-react-app react-framework-intro
+
+# Add router dependency
+npm install --save react-router-dom
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
