@@ -6,7 +6,8 @@ class MarkdownEditor extends React.Component {
     super(props);
     this.md = new Remarkable();
     this.handleChange = this.handleChange.bind(this);
-    this.state = { value: 'Hello, **world**!' };
+    this.state = { value: "Hellfffo, **world** \n- hello\n- bounjour\n- xin chào" 
+    };
   }
 
   handleChange(e) {
