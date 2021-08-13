@@ -1,0 +1,40 @@
+<h3>Main page</h3>
+<app-username [username]="'Chris'" (userClicked)="onUserWasClicked($event)"></app-username>
+<app-username [username]="'AnnA'" (userClicked)="onUserWasClicked($event)"></app-username>
+
+<hr/>
+<p [ngClass]="{updated: name != 'Max'}">
+  <!-- {{title}} -->
+  Hey {{name}}
+</p>
+<p *ngIf="name != 'Max'">Name changed</p>
+<button (click)="onChangeName()">Change Name</button>
+<button (click)="onAddElement()">Add Element</button>
+<ul>
+  <!-- id="{{'element' + element}}" -->
+  <li 
+    *ngFor="let el of elements"
+    [id]="'element' + el"
+    [ngStyle]="{backgroundColor: getColor(el)}"
+    >element {{el}}</li>
+</ul>
+
+<!-- Two ways binding -->
+<input type="text" [(ngModel)]="message"/>
+<p>{{message}}</p>
+<hr/>
+
+<!-- Hobby exercise -->
+<input type="text" [(ngModel)]="hobbyInput"/>
+<button (click)="onAddingNewHobby()">Add hobby</button>
+<p *ngIf="hobbyDeletedFlag">Hobby deleted!</p>
+<p 
+  [ngStyle]="{color: hobbies.length > 3 ? 'red' : 'green'}"
+  [ngClass]="{'multiple-hobbies': hobbies.length > 3 ? true : false}"
+  >Hobby count: {{ hobbies.length }}</p>
+<ul>
+  <hobby-component
+    *ngFor="let hobby of hobbies"
+    [hobbyName]="hobby"
+    (hobbyDeleted)="onHobbyDeleted($event)"></hobby-component>
+</ul>

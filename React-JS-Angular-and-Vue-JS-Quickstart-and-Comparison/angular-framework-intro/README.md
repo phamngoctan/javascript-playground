@@ -14,6 +14,9 @@ ng new angular-framework-intro
 # start the newly created project
 ng serve
 
+# create new component
+ng g c user
+
 ```
 
 ## Development server
