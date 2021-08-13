@@ -45,6 +45,16 @@ In a React component, props are variables passed to it by its parent component. 
 ### How React updates the DOM
 React follows the observable pattern and listens for state changes. When the state of a component changes, React updates the virtual DOM tree. Once the virtual DOM has been updated, React then compares the current version of the virtual DOM with the previous version of the virtual DOM. This process is called “diffing”.
 
+# Angular
+Led by the Angular team at Google. Intial released 2020. It has bigger fan compare to the two above frameworks.
+
+Unlike VueJS or ReactJS, Angular is quite hard to inject to mulitple pages application. It is not a target for Angular for doing it.
+
+Angular uses the TypeScript:
+- TypeScript has more features than vanilla JS (eg: Types, Classes, Interfaces, ...)
+- TypeScript require the type for variable declaration
+- TypeScript compiled to JavaScript
+- 
 
 # Notes
 Learn some more course about Javascript, DOM access, events, ...
